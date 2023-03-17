@@ -1,0 +1,30 @@
+{
+  "name": "@riri/eslint-config-react",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Daydreamer Riri <Daydreamerriri@outloot.com> (https://github.com/Daydreamer-riri/)",
+  "license": "MIT",
+  "homepage": "https://github.com/Daydreamer-riri/eslint-config",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "lint": "eslint . --config=index.js"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
+  "dependencies": {
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "react": "^18.2.0",
+    "typescript": "^4.9.5"
+  }
+}
