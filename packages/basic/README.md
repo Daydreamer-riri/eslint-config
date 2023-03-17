@@ -53,15 +53,19 @@ module.exports = {
 }
 ```
 
-## Arguably config
+## Other config
 
 ### about `semi`
 
+standard style default no semicolon, if you need a semicolon can define the rules as follows
+
 ```js
 module.exports = {
-  '@typescript-eslint/member-delimiter-style': ['error', { multiline: { delimiter: 'semi', requireLast: ture } }],
-  'semi': 'off',
-  '@typescript-eslint/semi': ['error', 'always'],
+  rules: {
+    '@typescript-eslint/member-delimiter-style': ['error', { multiline: { delimiter: 'semi', requireLast: ture } }],
+    'semi': 'off',
+    '@typescript-eslint/semi': ['error', 'always'],
+  }
 }
 ```
 
@@ -69,7 +73,9 @@ module.exports = {
 
 ```js
 module.exports = {
-  'brace-style': ['error', '1tbs', { allowSingleLine: true }]
+  rules: {
+    'brace-style': ['error', '1tbs', { allowSingleLine: true }]
+  }
 }
 ```
 
