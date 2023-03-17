@@ -14,7 +14,7 @@ Riri's ESLint config presets
 ### Install
 
 ```bash
-pnpm add -D eslint @riri/eslint-config
+pnpm add -D eslint @ririd/eslint-config
 ```
 
 ### Config
@@ -22,7 +22,7 @@ pnpm add -D eslint @riri/eslint-config
 ```json
 // .eslintrc
 {
-  "extends": "@riri"
+  "extends": "@ririd"
 }
 ```
 
@@ -49,7 +49,7 @@ Type aware rules are enabled when a `tsconfig.eslint.json` is found in the proje
 process.env.ESLINT_TSCONFIG = 'tsconfig.json'
 
 module.exports = {
-  extends: '@riri',
+  extends: '@ririd',
 }
 ```
 
