@@ -1,13 +1,13 @@
 const fs = require('node:fs')
 const { join } = require('node:path')
-const js = require('@riri/eslint-config-js')
+const js = require('@ririd/eslint-config-js')
 
 const tsconfig = process.env.ESLINT_TSCONFIG || 'tsconfig.eslint.json'
 
 /** @type {import('./node_modules/eslint/lib/shared/types').ConfigData} */
 module.exports = {
   extends: [
-    '@riri/eslint-config-js',
+    '@ririd/eslint-config-js',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
   ],

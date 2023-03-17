@@ -11,7 +11,7 @@
     "release": "bumpp -r && pnpm -r publish"
   },
   "devDependencies": {
-    "@riri/eslint-config": "*",
+    "@ririd/eslint-config": "*",
     "bumpp": "^9.0.0",
     "eslint": "^8.34.0",
     "rimraf": "^4.1.2",
