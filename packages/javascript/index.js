@@ -317,6 +317,10 @@ module.exports = {
     'operator-linebreak': ['error', 'before'],
     'max-statements-per-line': ['error', { max: 1 }],
 
+    // off
+    'no-tabs': 'off',
+    'no-throw-literal': 'off',
+
     // unicorns
     // Pass error message when throwing errors
     // 'unicorn/error-message': 'error',

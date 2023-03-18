@@ -30,13 +30,13 @@ module.exports = {
           // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts
           rules: {
             'no-throw-literal': 'off',
-            '@typescript-eslint/no-throw-literal': 'error',
+            '@typescript-eslint/no-throw-literal': 'off',
             'no-implied-eval': 'off',
             '@typescript-eslint/no-implied-eval': 'error',
             'dot-notation': 'off',
             '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
             '@typescript-eslint/no-floating-promises': 'off',
-            '@typescript-eslint/no-misused-promises': 'error',
+            '@typescript-eslint/no-misused-promises': 'off',
             '@typescript-eslint/await-thenable': 'off',
             '@typescript-eslint/no-for-in-array': 'error',
             '@typescript-eslint/no-unnecessary-type-assertion': 'error',
