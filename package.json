@@ -1,6 +1,6 @@
 {
   "name": "@riri/eslint-config-monorepo",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "packageManager": "pnpm@7.29.3",
   "author": "Daydreamer Riri <Daydreamerriri@outloot.com> (https://github.com/Daydreamer-riri/)",
