@@ -6,36 +6,36 @@ importers:
     specifiers:
       '@ririd/eslint-config': '*'
       bumpp: ^9.0.0
-      eslint: ^8.34.0
-      rimraf: ^4.1.2
-      typescript: ^4.9.5
+      eslint: ^8.36.0
+      rimraf: ^4.4.0
+      typescript: ^5.0.2
     devDependencies:
       '@ririd/eslint-config': link:packages/basic
       bumpp: 9.0.0
       eslint: 8.36.0
       rimraf: 4.4.0
-      typescript: 4.9.5
+      typescript: 5.0.2
 
   packages/basic:
     specifiers:
       '@ririd/eslint-config-js': workspace:*
       '@ririd/eslint-config-react': workspace:*
       '@ririd/eslint-config-ts': workspace:*
-      '@typescript-eslint/eslint-plugin': ^5.53.0
-      '@typescript-eslint/parser': ^5.53.0
-      eslint: ^8.34.0
+      '@typescript-eslint/eslint-plugin': ^5.55.0
+      '@typescript-eslint/parser': ^5.55.0
+      eslint: ^8.36.0
       eslint-plugin-eslint-comments: ^3.2.0
       eslint-plugin-html: ^7.1.0
       eslint-plugin-import: ^2.27.5
-      eslint-plugin-jsonc: ^2.6.0
+      eslint-plugin-jsonc: ^2.7.0
       eslint-plugin-n: ^15.6.1
       eslint-plugin-promise: ^6.1.1
-      eslint-plugin-unicorn: ^45.0.2
+      eslint-plugin-unicorn: ^46.0.0
       eslint-plugin-vue: ^9.9.0
       eslint-plugin-yml: ^1.5.0
-      jsonc-eslint-parser: ^2.1.0
+      jsonc-eslint-parser: ^2.2.0
       local-pkg: ^0.4.3
-      yaml-eslint-parser: ^1.1.0
+      yaml-eslint-parser: ^1.2.0
     dependencies:
       '@ririd/eslint-config-js': link:../javascript
       '@ririd/eslint-config-react': link:../react
@@ -48,7 +48,7 @@ importers:
       eslint-plugin-jsonc: 2.7.0_eslint@8.36.0
       eslint-plugin-n: 15.6.1_eslint@8.36.0
       eslint-plugin-promise: 6.1.1_eslint@8.36.0
-      eslint-plugin-unicorn: 45.0.2_eslint@8.36.0
+      eslint-plugin-unicorn: 46.0.0_eslint@8.36.0
       eslint-plugin-vue: 9.9.0_eslint@8.36.0
       eslint-plugin-yml: 1.5.0_eslint@8.36.0
       jsonc-eslint-parser: 2.2.0
@@ -59,23 +59,23 @@ importers:
 
   packages/javascript:
     specifiers:
-      eslint: ^8.34.0
-      eslint-plugin-antfu: ^0.36.0
+      eslint: ^8.36.0
+      eslint-plugin-antfu: ^0.37.0
       eslint-plugin-eslint-comments: ^3.2.0
       eslint-plugin-html: ^7.1.0
       eslint-plugin-import: ^2.27.5
-      eslint-plugin-jsonc: ^2.6.0
+      eslint-plugin-jsonc: ^2.7.0
       eslint-plugin-markdown: ^3.0.0
       eslint-plugin-n: ^15.6.1
       eslint-plugin-no-only-tests: ^3.1.0
       eslint-plugin-promise: ^6.1.1
-      eslint-plugin-unicorn: ^45.0.2
+      eslint-plugin-unicorn: ^46.0.0
       eslint-plugin-unused-imports: ^2.0.0
       eslint-plugin-yml: ^1.5.0
-      jsonc-eslint-parser: ^2.1.0
-      yaml-eslint-parser: ^1.1.0
+      jsonc-eslint-parser: ^2.2.0
+      yaml-eslint-parser: ^1.2.0
     dependencies:
-      eslint-plugin-antfu: 0.36.0_eslint@8.36.0
+      eslint-plugin-antfu: 0.37.0_eslint@8.36.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.36.0
       eslint-plugin-html: 7.1.0
       eslint-plugin-import: 2.27.5_eslint@8.36.0
@@ -84,7 +84,7 @@ importers:
       eslint-plugin-n: 15.6.1_eslint@8.36.0
       eslint-plugin-no-only-tests: 3.1.0
       eslint-plugin-promise: 6.1.1_eslint@8.36.0
-      eslint-plugin-unicorn: 45.0.2_eslint@8.36.0
+      eslint-plugin-unicorn: 46.0.0_eslint@8.36.0
       eslint-plugin-unused-imports: 2.0.0_eslint@8.36.0
       eslint-plugin-yml: 1.5.0_eslint@8.36.0
       jsonc-eslint-parser: 2.2.0
@@ -94,25 +94,25 @@ importers:
 
   packages/react:
     specifiers:
-      eslint: ^8.34.0
+      eslint: ^8.36.0
       eslint-plugin-react: ^7.32.2
       eslint-plugin-react-hooks: ^4.6.0
       react: ^18.2.0
-      typescript: ^4.9.5
+      typescript: ^5.0.2
     dependencies:
       eslint-plugin-react: 7.32.2_eslint@8.36.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.36.0
     devDependencies:
       eslint: 8.36.0
       react: 18.2.0
-      typescript: 4.9.5
+      typescript: 5.0.2
 
   packages/typescript:
     specifiers:
       '@ririd/eslint-config-js': workspace:*
-      '@typescript-eslint/eslint-plugin': ^5.53.0
-      '@typescript-eslint/parser': ^5.53.0
-      eslint: ^8.34.0
+      '@typescript-eslint/eslint-plugin': ^5.55.0
+      '@typescript-eslint/parser': ^5.55.0
+      eslint: ^8.36.0
       eslint-plugin-jest: ^27.2.1
     dependencies:
       '@ririd/eslint-config-js': link:../javascript
@@ -848,8 +848,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-antfu/0.36.0_eslint@8.36.0:
-    resolution: {integrity: sha512-qLYtjZC2y6d1fvVtG4nvVGoBUDEuUwQsS4E1RwjoEZyONZAkHYDPfeoeULDlPS0IqumSW8uGR6zGSAXi5rrVMg==}
+  /eslint-plugin-antfu/0.37.0_eslint@8.36.0:
+    resolution: {integrity: sha512-Tekr9S4fkrmH88RS5XHvs3gQwQIn/2As8gYePzrPHTQEQF00pIx0sa1eQrhmvN50ubUG4WkZnpx/uR3073jLeg==}
     dependencies:
       '@typescript-eslint/utils': 5.55.0_eslint@8.36.0
     transitivePeerDependencies:
@@ -1060,8 +1060,8 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: false
 
-  /eslint-plugin-unicorn/45.0.2_eslint@8.36.0:
-    resolution: {integrity: sha512-Y0WUDXRyGDMcKLiwgL3zSMpHrXI00xmdyixEGIg90gHnj0PcHY4moNv3Ppje/kDivdAy5vUeUr7z211ImPv2gw==}
+  /eslint-plugin-unicorn/46.0.0_eslint@8.36.0:
+    resolution: {integrity: sha512-j07WkC+PFZwk8J33LYp6JMoHa1lXc1u6R45pbSAipjpfpb7KIGr17VE2D685zCxR5VL4cjrl65kTJflziQWMDA==}
     engines: {node: '>=14.18'}
     peerDependencies:
       eslint: '>=8.28.0'
@@ -2416,9 +2416,9 @@ packages:
       is-typed-array: 1.1.10
     dev: false
 
-  /typescript/4.9.5:
-    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
-    engines: {node: '>=4.2.0'}
+  /typescript/5.0.2:
+    resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
+    engines: {node: '>=12.20'}
     hasBin: true
     dev: true
 
