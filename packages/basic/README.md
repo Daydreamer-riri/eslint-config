@@ -5,7 +5,7 @@ Riri's ESLint config presets
 
 - Based [standard](https://github.com/standard/eslint-config-standard), single quotes, no semi
 - Auto fix for formatting
-- Designed to work with TypeScript, React out-of-box
+- Designed to work with TypeScript, **React** out-of-box
 - Lint also for json, yaml, markdown
 - Sorted imports, dangling commas
 
@@ -81,4 +81,4 @@ module.exports = {
 
 ## Thanks 
 
-This project is heavily based on [antfu](https://github.com/antfu/)'s template, with a certain degree of customization
+This project is heavily based on [antfu](https://github.com/antfu/)'s template, with a certain degree of customization and more rules regarding React.
