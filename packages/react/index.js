@@ -24,6 +24,7 @@ module.exports = {
       ],
     'react/jsx-indent-props': [2, 2],
     'react/jsx-closing-bracket-location': 2,
+    'react/jsx-closing-tag-location': 2,
     'react/jsx-curly-newline': 2,
     'react/jsx-curly-spacing': [2, { when: 'never' }],
     'react/jsx-first-prop-new-line': 2,
