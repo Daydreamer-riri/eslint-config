@@ -298,7 +298,7 @@ module.exports = {
     }],
 
     // best-practice
-    'array-callback-return': 'error',
+    'array-callback-return': ['error', { allowImplicit: true }],
     'block-scoped-var': 'error',
     'consistent-return': 'off',
     'complexity': ['off', 11],
