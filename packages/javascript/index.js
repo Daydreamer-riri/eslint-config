@@ -161,12 +161,6 @@ module.exports = {
       },
     },
     {
-      files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
-      rules: {
-        'no-void': ['error', { allowAsStatement: true }],
-      },
-    },
-    {
       files: ['scripts/**/*.*', 'cli.*'],
       rules: {
         'no-console': 'off',
@@ -308,7 +302,6 @@ module.exports = {
     'no-multi-spaces': 'error',
     'no-multi-str': 'error',
     'no-with': 'error',
-    'no-void': 'error',
     'no-useless-escape': 'off',
     'vars-on-top': 'error',
     'require-await': 'off',
@@ -320,6 +313,7 @@ module.exports = {
     'no-tabs': 'off',
     'no-throw-literal': 'off',
     'no-cond-assign': 'off',
+    'no-void': 'off',
 
     // unicorns
     // Pass error message when throwing errors
