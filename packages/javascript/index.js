@@ -202,6 +202,7 @@ module.exports = {
     'import/no-mutable-exports': 'warn',
     'import/no-unresolved': 'off',
     'import/no-absolute-path': 'off',
+    'import/newline-after-import': ['error', { count: 1 }],
 
     // Common
     'semi': ['error', 'never'],
