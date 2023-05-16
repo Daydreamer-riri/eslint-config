@@ -43,12 +43,10 @@ module.exports = {
       condition: 'parens-new-line',
       logical: 'parens-new-line',
     }],
-    'react/jsx-one-expression-per-line': ['error', {
-      allow: 'single-child',
-    }],
+    'react/jsx-one-expression-per-line': 'off',
     'react/jsx-max-props-per-line': ['error', {
       maximum: {
-        single: 2,
+        single: 3,
         multi: 1,
       },
     }],
