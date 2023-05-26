@@ -2,7 +2,7 @@
   "name": "@riri/eslint-config-monorepo",
   "version": "0.5.1",
   "private": true,
-  "packageManager": "pnpm@8.3.0",
+  "packageManager": "pnpm@8.5.1",
   "author": "Daydreamer Riri <Daydreamerriri@outloot.com> (https://github.com/Daydreamer-riri/)",
   "license": "MIT",
   "scripts": {
@@ -13,8 +13,8 @@
   "devDependencies": {
     "@ririd/eslint-config": "*",
     "bumpp": "^9.1.0",
-    "eslint": "^8.38.0",
-    "rimraf": "^4.4.1",
+    "eslint": "^8.41.0",
+    "rimraf": "^5.0.1",
     "typescript": "^5.0.4"
   }
 }
