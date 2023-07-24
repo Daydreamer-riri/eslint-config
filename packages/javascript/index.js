@@ -192,6 +192,8 @@ module.exports = {
         'no-undef': 'off',
         'no-unused-expressions': 'off',
         'no-unused-vars': 'off',
+        'antfu/no-cjs-exports': 'off',
+        'antfu/no-ts-export-equal': 'off',
       },
     },
   ],
