@@ -36,7 +36,19 @@ Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?it
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "css",
+    "json"
+    // ...
+  ]
 }
 ```
 
