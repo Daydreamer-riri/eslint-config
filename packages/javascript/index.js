@@ -44,7 +44,7 @@ module.exports = {
     'Dockerfile',
     // force include
     '!.github',
-    '!.vitepress',
+    '**/.vitepress/cache',
     '!.vscode',
   ],
   plugins: [
