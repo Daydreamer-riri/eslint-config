@@ -154,6 +154,7 @@ module.exports = {
               'types',
               'require',
               'import',
+              'default',
             ],
           },
         ],
