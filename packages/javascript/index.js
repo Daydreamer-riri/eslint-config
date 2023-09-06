@@ -1,3 +1,6 @@
+const isInEditor = (process.env.VSCODE_PID || process.env.JETBRAINS_IDE) && !process.env.CI
+const offInEditor = isInEditor ? 'off' : 'error'
+
 /** @type {import('./node_modules/eslint/lib/shared/types').ConfigData} */
 module.exports = {
   env: {
@@ -215,7 +218,7 @@ module.exports = {
     'no-extend-native': 'warn',
     'prefer-promise-reject-errors': 'off',
 
-    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-imports': offInEditor,
     'unused-imports/no-unused-vars': [
       'warn',
       { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
