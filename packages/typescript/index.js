@@ -156,6 +156,8 @@ module.exports = {
 
     // antfu
     'antfu/generic-spacing': 'error',
+    'antfu/no-const-enum': 'error',
+    'antfu/named-tuple-spacing': 'error',
 
     // off
     '@typescript-eslint/consistent-indexed-object-style': 'off',
