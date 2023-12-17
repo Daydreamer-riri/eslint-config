@@ -1,9 +1,9 @@
 {
   "name": "@ririd/eslint-config",
+  "type": "module",
   "version": "1.0.0",
   "packageManager": "pnpm@8.12.1",
   "author": "Daydreamer Riri <Daydreamerriri@outloot.com> (https://github.com/Daydreamer-riri/)",
-  "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/daydreamer-riri/eslint-config",
   "keywords": [
@@ -18,8 +18,8 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist",
-    "bin"
+    "bin",
+    "dist"
   ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --clean --dts",

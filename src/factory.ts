@@ -1,7 +1,6 @@
 import type { Awaitable, FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
 import antfu from '@antfu/eslint-config'
 import { all, react } from './configs'
-import { combine } from './utils'
 
 interface CustomConfig { all?: boolean }
 
@@ -26,11 +25,9 @@ export async function ririd(
   if (options.all ?? true)
     configs.push(all())
 
-  const merged = combine(
-    ...(await antfu(options)),
+  return antfu(
+    options,
     ...configs,
     ...userConfigs,
   )
-
-  return merged
 }

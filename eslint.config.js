@@ -1,5 +1,6 @@
 import ririd from '@ririd/eslint-config'
 
 export default ririd({
-  formatters: true
+  formatters: true,
+  ignores: ['packages/**/*'],
 })

@@ -5,21 +5,23 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
-    // Enable the ESlint flat config support
+  // Enable the ESlint flat config support
   "eslint.experimental.useFlatConfig": true,
+
+  // Enable eslint for all supported languages
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "html",
     "vue",
+    "html",
     "markdown",
-    "css",
-    "json"
-    // ...
+    "json",
+    "jsonc",
+    "yaml"
   ],
-    // Silent the stylistic rules in you IDE, but still auto fix them
+  // Silent the stylistic rules in you IDE, but still auto fix them
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off" },
     { "rule": "format/*", "severity": "off" },
