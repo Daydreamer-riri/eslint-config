@@ -3,10 +3,12 @@
     "baseUrl": ".",
     "target": "es2020",
     "module": "es2020",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "strict": true
   },
   "include": [
-    "./packages/**/*.ts"
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "exclude": [
     "./fixtures/**/*.*"

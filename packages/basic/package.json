@@ -1,5 +1,5 @@
 {
-  "name": "@ririd/eslint-config",
+  "name": "@ririd/eslint-config-basic",
   "version": "0.7.0",
   "description": "Riri's ESLint config",
   "author": "Daydreamer Riri <Daydreamerriri@outloot.com> (https://github.com/Daydreamer-riri/)",
