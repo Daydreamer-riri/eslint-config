@@ -1,6 +1,6 @@
 import type { Awaitable, FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
 import antfu from '@antfu/eslint-config'
-import { all, next, react } from './configs'
+import { all, markdown, next, react } from './configs'
 
 interface CustomConfig { all?: boolean, next?: boolean }
 
@@ -27,6 +27,9 @@ export async function ririd(
 
   if (options.next ?? false)
     configs.push(next())
+
+  if (options.markdown ?? true)
+    configs.push(markdown())
 
   return antfu(
     options,
