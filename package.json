@@ -27,7 +27,7 @@
     "lint": "eslint .",
     "test": "pnpm -r run test",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp -r && pnpm -r publish"
+    "release": "bumpp && pnpm publish"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0"
