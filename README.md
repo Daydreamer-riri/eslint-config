@@ -118,13 +118,15 @@ export default ririd({
     quotes: 'single', // or 'double'
   },
 
-  // TypeScript and Vue are auto-detected, you can also explicitly enable them:
   typescript: true,
   vue: true,
 
   // Disable jsonc and yaml support
   jsonc: false,
   yaml: false,
+
+  // enable nextjs-plugin
+  next: true,
 
   // `.eslintignore` is no longer supported in Flat config, use `ignores` instead
   ignores: [
