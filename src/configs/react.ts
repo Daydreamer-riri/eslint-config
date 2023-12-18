@@ -11,6 +11,8 @@ export async function react(): Promise<FlatConfigItem[]> {
         'react/jsx-no-leaked-render': 'error',
         'react/jsx-props-no-multi-spaces': 'error',
         'react/no-unknown-property': 'off',
+        'react/display-name': 'off',
+        'react-refresh/only-export-components': 'off',
       },
     },
   ]

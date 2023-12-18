@@ -6,7 +6,6 @@ export async function all(): Promise<FlatConfigItem[]> {
       name: 'ririd:all',
       rules: {
         'antfu/no-cjs-exports': 'off',
-        'arrow-parens': ['error', 'as-needed'],
 
         'import/prefer-default-export': 'off',
         'import/extensions': 'off',
