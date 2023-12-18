@@ -10,6 +10,7 @@ export async function react(): Promise<FlatConfigItem[]> {
         'react/prop-types': 'warn',
         'react/jsx-no-leaked-render': 'error',
         'react/jsx-props-no-multi-spaces': 'error',
+        'react/no-unknown-property': 'off',
       },
     },
   ]

@@ -1,97 +1,141 @@
-# eslint-config
+# @ririd/eslint-config
+
+[![npm](https://img.shields.io/npm/v/@ririd/eslint-config?color=444&label=)](https://npmjs.com/package/@ririd/eslint-config)
 
 Riri's ESLint config presets
 
-## Feature
-
-- Based [standard](https://github.com/standard/eslint-config-standard), single quotes, no semi
-- Auto fix for formatting
-- Designed to work with TypeScript, **React** out-of-box
-- Lint also for json, yaml, markdown
-- Sorted imports, dangling commas
+> [!IMPORTANT]
+> This project is heavily based on [antfu/eslint-config](https://github.com/antfu/eslint-config), with a certain degree of customization ~~and more rules regarding React~~.
+>
+> Since v1.0.0, this config is rewritten to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new).
 
 ## Usage
 
 ### Install
 
 ```bash
-pnpm add -D eslint @ririd/eslint-config
+pnpm i -D eslint @ririd/eslint-config
 ```
 
-### Config
+### Create config file
 
-```json
-// .eslintrc
-{
-  "extends": "@ririd"
-}
+With [`"type": "module"`](https://nodejs.org/api/packages.html#type) in `package.json` (recommended):
+
+```js
+// eslint.config.js
+import ririd from '@ririd/eslint-config'
+
+export default ririd()
 ```
 
-### Config VS Code auto fix
+With CJS:
 
-Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and create `.vscode/settings.json`
+```js
+// eslint.config.js
+const ririd = require('@ririd/eslint-config').default
 
-```json
+module.exports = ririd()
+```
+
+> Note that `.eslintignore` no longer works in Flat config, see [customization](#customization) for more details.
+
+## VS Code support (auto fix)
+
+Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+Add the following settings to your `.vscode/settings.json`:
+
+```jsonc
 {
+  // Enable the ESlint flat config support
+  "eslint.experimental.useFlatConfig": true,
+
+  // Disable the default formatter, use eslint instead
   "prettier.enable": false,
   "editor.formatOnSave": false,
+
+  // Auto fix
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
   },
+
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off" },
+    { "rule": "format/*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" }
+  ],
+
+  // Enable eslint for all supported languages
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "html",
     "vue",
+    "html",
     "markdown",
-    "css",
-    "json"
-    // ...
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
   ]
 }
 ```
 
-### TypeScript Aware Rules
+## Customization
 
-Type aware rules are enabled when a `tsconfig.eslint.json` is found in the project root, which will introduce some stricter rules into your project. If you want to enable it while have no `tsconfig.eslint.json` in the project root, you can change tsconfig name by modifying `ESLINT_TSCONFIG` env.
-
-```js
-// .eslintrc.js
-process.env.ESLINT_TSCONFIG = 'tsconfig.json'
-
-module.exports = {
-  extends: '@ririd',
-}
-```
-
-## Other config
-
-### about `semi`
-
-standard style default no semicolon, if you need a semicolon can define the rules as follows
+Normally you only need to import the `ririd` preset:
 
 ```js
-module.exports = {
-  rules: {
-    '@typescript-eslint/member-delimiter-style': ['error', { multiline: { delimiter: 'semi', requireLast: ture } }],
-    'semi': 'off',
-    '@typescript-eslint/semi': ['error', 'always'],
-  }
-}
+// eslint.config.js
+import ririd from '@ririd/eslint-config'
+
+export default ririd()
 ```
 
-### about `brace-style`
+Or you can configure each integration individually, for example:
 
 ```js
-module.exports = {
-  rules: {
-    'brace-style': ['error', '1tbs', { allowSingleLine: true }]
-  }
-}
+// eslint.config.js
+import ririd from '@ririd/eslint-config'
+
+export default ririd({
+  // Enable stylistic formatting rules
+  // stylistic: true,
+
+  // Or customize the stylistic rules
+  stylistic: {
+    indent: 2, // 4, or 'tab'
+    quotes: 'single', // or 'double'
+  },
+
+  // TypeScript and Vue are auto-detected, you can also explicitly enable them:
+  typescript: true,
+  vue: true,
+
+  // Disable jsonc and yaml support
+  jsonc: false,
+  yaml: false,
+
+  // `.eslintignore` is no longer supported in Flat config, use `ignores` instead
+  ignores: [
+    './fixtures',
+    // ...globs
+  ]
+})
 ```
 
-## Thanks
+For more advanced usage, see [@antfu/eslint-config](https://github.com/antfu/eslint-config?tab=readme-ov-file#antfueslint-config).
 
-This project is heavily based on [antfu](https://github.com/antfu/)'s template, with a certain degree of customization and more rules regarding React.
+## License
+
+[MIT](./LICENSE) License &copy; 2023-PRESENT [Riri](https://github.com/daydreamer-riri)
