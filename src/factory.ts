@@ -1,5 +1,5 @@
 import type { Awaitable, FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
-import antfu from '@antfu/eslint-config'
+import { antfu } from '@antfu/eslint-config'
 import { all, markdown, next, react } from './configs'
 
 interface CustomConfig { all?: boolean, next?: boolean }
