@@ -33,7 +33,7 @@
     "eslint": ">=8.0.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^2.9.0",
+    "@antfu/eslint-config": "^2.12.2",
     "@next/eslint-plugin-next": "^14.1.4",
     "eslint-plugin-format": "^0.1.0",
     "eslint-plugin-react": "^7.34.1",

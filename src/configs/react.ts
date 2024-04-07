@@ -1,7 +1,7 @@
-import type { FlatConfigItem } from '@antfu/eslint-config'
+import type { TypedFlatConfigItem } from '@antfu/eslint-config'
 import { GLOB_JSX, GLOB_TSX } from '@antfu/eslint-config'
 
-export async function react(): Promise<FlatConfigItem[]> {
+export async function react(): Promise<TypedFlatConfigItem[]> {
   return [
     {
       files: [GLOB_JSX, GLOB_TSX],

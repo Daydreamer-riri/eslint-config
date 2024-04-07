@@ -1,7 +1,7 @@
 import { GLOB_MARKDOWN_CODE } from '@antfu/eslint-config'
-import type { FlatConfigItem } from '@antfu/eslint-config'
+import type { TypedFlatConfigItem } from '@antfu/eslint-config'
 
-export async function markdown(): Promise<FlatConfigItem[]> {
+export async function markdown(): Promise<TypedFlatConfigItem[]> {
   return [
     {
       name: 'ririd:markdown',

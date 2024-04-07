@@ -1,6 +1,6 @@
-import { type FlatConfigItem, interopDefault } from '@antfu/eslint-config'
+import { type TypedFlatConfigItem, interopDefault } from '@antfu/eslint-config'
 
-export async function next(): Promise<FlatConfigItem[]> {
+export async function next(): Promise<TypedFlatConfigItem[]> {
   // @ts-expect-error un typed
   const next = await interopDefault(import('@next/eslint-plugin-next'))
 

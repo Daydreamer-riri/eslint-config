@@ -1,17 +1,19 @@
-import type { Awaitable, FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
+import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from '@antfu/eslint-config'
 import { antfu } from '@antfu/eslint-config'
 import { all, markdown, next, react } from './configs'
 
 interface CustomConfig { all?: boolean, next?: boolean }
 
+type UserConfigItem = Parameters<typeof antfu>[1]
+type Configs = ReturnType<typeof antfu>
 /**
  * 构建一个 ESLint 平面配置项数组。
  */
-export async function ririd(
-  options: OptionsConfig & CustomConfig & FlatConfigItem = {},
-  ...userConfigs: (UserConfigItem | UserConfigItem[])[]
-): Promise<UserConfigItem[]> {
-  const configs: Awaitable<FlatConfigItem[]>[] = []
+export function ririd(
+  options: OptionsConfig & CustomConfig & TypedFlatConfigItem = {},
+  ...userConfigs: UserConfigItem[]
+): Configs {
+  const configs: Awaitable<TypedFlatConfigItem[]>[] = []
 
   options = {
     ...options,
