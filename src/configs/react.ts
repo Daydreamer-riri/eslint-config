@@ -7,12 +7,9 @@ export async function react(): Promise<TypedFlatConfigItem[]> {
       files: [GLOB_JSX, GLOB_TSX],
       name: 'ririd:react',
       rules: {
-        'react/prop-types': 'warn',
-        'react/jsx-no-leaked-render': 'error',
-        'react/jsx-props-no-multi-spaces': 'error',
-        'react/no-unknown-property': 'off',
-        'react/display-name': 'off',
         'react-refresh/only-export-components': 'off',
+        'react/no-clone-element': 'off',
+        'react/no-missing-component-display-name': 'off',
       },
     },
   ]
