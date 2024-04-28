@@ -4,13 +4,8 @@
     "baseUrl": ".",
     "module": "es2020",
     "moduleResolution": "node",
-    "strict": true
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "./fixtures/**/*.*"
-  ]
 }
