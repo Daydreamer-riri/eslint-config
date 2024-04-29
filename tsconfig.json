@@ -3,7 +3,7 @@
     "target": "es2020",
     "baseUrl": ".",
     "module": "es2020",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true
