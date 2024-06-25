@@ -165,6 +165,7 @@ export default createRule<MessageIds, RuleOptions>({
      */
     function checkLiteralNodeIndent(node: Tree.Literal | Tree.JSXText, indent: number) {
       const value = node.value
+      // eslint-disable-next-line regexp/no-super-linear-backtracking, regexp/optimal-quantifier-concatenation
       const regExp = indentType === 'space' ? /\n( *)[\t ]*\S/g : /\n(\t*)[\t ]*\S/g
       const nodeIndentsPerLine = Array.from(
         String(value).matchAll(regExp),

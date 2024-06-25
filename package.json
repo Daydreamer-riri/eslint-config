@@ -34,22 +34,22 @@
     "eslint": ">=8.0.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^2.15.0",
-    "@eslint-react/eslint-plugin": "^1.5.9",
-    "@next/eslint-plugin-next": "^14.1.4",
-    "eslint-plugin-format": "^0.1.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6"
+    "@antfu/eslint-config": "^2.21.1",
+    "@eslint-react/eslint-plugin": "^1.5.16",
+    "@next/eslint-plugin-next": "^14.2.4",
+    "eslint-plugin-format": "^0.1.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7"
   },
   "devDependencies": {
     "@ririd/eslint-config": "workspace:*",
     "@types/eslint": "^8.56.9",
     "@types/node": "20.10.4",
     "bumpp": "^9.4.0",
-    "eslint": "^9.1.0",
+    "eslint": "^9.5.0",
     "rimraf": "^5.0.5",
-    "tsup": "^8.0.2",
-    "typescript": "^5.3.3",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2",
     "vitest": "^1.5.2"
   }
 }
