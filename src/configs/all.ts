@@ -15,7 +15,7 @@ export async function all(): Promise<TypedFlatConfigItem[]> {
 
         'jsonc/comma-dangle': 'off',
         'style/jsx-quotes': ['error', 'prefer-double'],
-        'style/jsx-one-expression-per-line': 'off',
+        'style/jsx-one-expression-per-line': ['error', { allow: 'single-line' }],
         'style/arrow-parens': ['error', 'as-needed'],
 
         'unused-imports/no-unused-imports': 'error',
