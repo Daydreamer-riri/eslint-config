@@ -1,10 +1,10 @@
-import { RuleTester } from '@typescript-eslint/utils/ts-eslint'
 import type { InvalidTestCase, ValidTestCase } from '@typescript-eslint/utils/ts-eslint'
-import { it } from 'vitest'
-
-import tsEsLintParser from '@typescript-eslint/parser'
 // import globals from 'globals'
 import type { Rule } from 'eslint'
+import tsEsLintParser from '@typescript-eslint/parser'
+
+import { RuleTester } from '@typescript-eslint/utils/ts-eslint'
+import { it } from 'vitest'
 
 const tester = new RuleTester({
   languageOptions: {

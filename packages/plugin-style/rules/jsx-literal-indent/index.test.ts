@@ -2,10 +2,10 @@ import { runTest } from '../../test-utils/tester'
 import rule from './index'
 
 runTest('jsx-literal-indent', rule, {
-  *valid() {
+  * valid() {
     yield `const a = <div>literal</div>`
   },
-  *invalid() {
+  * invalid() {
     yield {
       code: `
         <div>

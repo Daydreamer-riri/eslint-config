@@ -158,24 +158,24 @@ function applyAllParsers(tests: ValidTestCase[] | InvalidTestCase[]) {
       skipBase
         ? []
         : addComment(
-          Object.assign({}, test, typeof es === 'number' && {
-            parserOptions: Object.assign({}, test.parserOptions, {
-              ecmaVersion: es,
+            Object.assign({}, test, typeof es === 'number' && {
+              parserOptions: Object.assign({}, test.parserOptions, {
+                ecmaVersion: es,
+              }),
             }),
-          }),
-          'default',
-        ),
+            'default',
+          ),
       skipNewBabel
         ? []
         : addComment(Object.assign({}, test, {
-          parser: BABEL_ESLINT,
-          parserOptions: babelParserOptions(test, features),
-        }), '@babel/eslint-parser'),
+            parser: BABEL_ESLINT,
+            parserOptions: babelParserOptions(test, features),
+          }), '@babel/eslint-parser'),
       tsNew
         ? addComment(Object.assign({}, test, {
-          parser: TYPESCRIPT_ESLINT,
-          parserOptions: tsParserOptions(test, features),
-        }), '@typescript-eslint/parser')
+            parser: TYPESCRIPT_ESLINT,
+            parserOptions: tsParserOptions(test, features),
+          }), '@typescript-eslint/parser')
         : [],
     )
   })

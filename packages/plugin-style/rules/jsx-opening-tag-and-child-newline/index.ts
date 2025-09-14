@@ -1,7 +1,7 @@
+import type { Tree } from '../../utils/types'
 import { isNodeFirstInLine } from '../../utils/ast'
 import { createRule } from '../../utils/createRule'
 import { docsUrl } from '../../utils/docsUrl'
-import type { Tree } from '../../utils/types'
 
 export type RuleOptions = []
 export type MessageIds = 'onOwnLine' | 'matchIndent'
@@ -44,7 +44,7 @@ export default createRule<MessageIds, RuleOptions>({
         messageId: 'onOwnLine',
         loc: firstChild.loc,
         fix(fixer) {
-          const indent = Array(node.loc.start.column + 3 - whitespaceLength).join(' ')
+          const indent = Array.from({ length: node.loc.start.column + 3 - whitespaceLength }).join(' ')
           if (isNodeFirstInLine(context, firstChild)) {
             return fixer.replaceTextRange(
               [firstChild.range[0] - firstChild.loc.start.column, firstChild.range[0]],

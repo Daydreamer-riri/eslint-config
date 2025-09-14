@@ -74,7 +74,7 @@ export default createRule<MessageIds, RuleOptions>({
      * @private
      */
     function getFixerFunction(node: ASTNode, needed: number): ReportFixFunction {
-      const indent = Array(needed + 1).join(indentChar)
+      const indent = Array.from({ length: needed + 1 }).join(indentChar)
 
       if (node.type === 'JSXText' || node.type === 'Literal') {
         return function fix(fixer) {

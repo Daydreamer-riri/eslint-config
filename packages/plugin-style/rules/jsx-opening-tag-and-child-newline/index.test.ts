@@ -2,7 +2,7 @@ import { runTest } from '../../test-utils/tester'
 import rule from './index'
 
 runTest('jsx-opening-tag-and-child-location', rule, {
-  *valid() {
+  * valid() {
     yield `const a = <div>literal</div>`
 
     yield `
@@ -11,7 +11,7 @@ runTest('jsx-opening-tag-and-child-location', rule, {
       </div>
     `
   },
-  *invalid() {
+  * invalid() {
     yield {
       code: `
         <div>literal
